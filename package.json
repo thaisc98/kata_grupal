@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/thaisc98/kata_grupal/issues"
   },
-  "homepage": "https://github.com/thaisc98/kata_grupal#readme"
+  "homepage": "https://github.com/thaisc98/kata_grupal#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "typescript": "^4.3.4"
+  }
 }
