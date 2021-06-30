@@ -1,4 +1,4 @@
-import {Anagramas} from "../src/app.ts";
+import { Anagramas } from "../src/app";
 
 
 

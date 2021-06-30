@@ -36,5 +36,6 @@
   },
   "dependencies": {
     "ts-jest": "^27.0.3"
-  }
+  }, "type":"module"
+
 }
