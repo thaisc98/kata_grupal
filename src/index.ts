@@ -4,9 +4,9 @@ import { Anagramas } from './app';
   const start_time = Date.now();
   let counter: number = 0;
 
-  const { compute } = new Anagramas('wordlist.txt');
+  const { checkAnagrams } = new Anagramas('wordlist.txt');
 
-  const anagrams: Array<Array<string>> = compute();
+  const anagrams: Array<Array<string>> = checkAnagrams();
 
   for (const arr of anagrams) {
     console.log(arr, ',');

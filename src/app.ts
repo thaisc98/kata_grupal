@@ -1,4 +1,5 @@
 import { stringify } from 'querystring';
+import internal from 'stream';
 
 const fs = require('fs');
 
@@ -15,19 +16,14 @@ export class Anagramas {
       this.fileName = input;
       this.words = fs.readFileSync(input, 'utf-8').toString().split('\n');
     } else if (input instanceof Array) {
+      this.words = input;
     } else {
       throw new Error('Not avaible type of input.');
     }
   };
 
-  //   checkAnagrams = (input): boolean => {
-  //     return true;
-  //   };
-
-  compute = (): Array<Array<string>> => {
+  checkAnagrams = (): Array<Array<string>> => {
     const tempAnagrams = new Map<string, Array<string>>();
-
-    console.log('Hello World');
 
     for (const word of this.words) {
       const sortedWord: string = word.split('').sort().join('').toLowerCase();
@@ -37,10 +33,9 @@ export class Anagramas {
       if (!anagramVal) anagramVal = [];
 
       anagramVal.push(word);
-
+      // key: palabra value: arreglo
       tempAnagrams.set(sortedWord, anagramVal);
     }
-
     console.log(tempAnagrams.size);
 
     const anagrams: Array<Array<string>> = [];
