@@ -8,6 +8,11 @@ describe('Anagrams', () => {
     const { checkAnagrams } = new Anagramas(input);
     expect(checkAnagrams()).toStrictEqual([['hola', 'olha']]);
   });
+  it('should return false if hola and adios', () => {
+    let input = ['hola', 'adios'];
+    const { checkAnagrams } = new Anagramas(input);
+    expect(checkAnagrams()).toStrictEqual([]);
+  });
 
   it('should return 3 ', () => {
     const { checkAnagrams } = new Anagramas(testArray);
@@ -18,4 +23,5 @@ describe('Anagrams', () => {
     const { checkAnagrams } = new Anagramas([]);
     expect(checkAnagrams().length).toStrictEqual(0);
   });
+  
 });
